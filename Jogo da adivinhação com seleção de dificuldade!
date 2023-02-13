@@ -1,0 +1,109 @@
+from random import randint
+
+
+jogadas = 5
+easy = randint(1, 10)
+medium = randint(1, 20)
+hard = randint(1, 30)
+extreme = randint(1, 50)
+impossible = randint(1, 100)
+
+print('=-='*17)
+print('Bem vindo ao jogo de adivinhação! v1.0')
+print(f'Você tem {jogadas} jogadas para tentar acertar! Boa sorte!')
+print('=-='*17)
+
+dificuldade = int(input(
+    'Escolha a dificuldade:\n1 - Facil\n2 - Medio\n3 - Dificíl\n4 - Extremo\n5 - Impossivel\n'))
+
+while True:
+    if jogadas <= 0:
+        print('=-='*11)
+        print('Acabou suas tentativas, você perdeu!\nO número era: ', easy,)
+        print('=-='*11)
+        break
+
+    if dificuldade == 1:
+        jogador = int(input('Tente adivinhar um numero de 1 a 10: '))
+        if jogador < 1 or jogador > 10:
+            print('Entrada invalida! Por favor, escolha um numero entre 1 e 20!\n')
+        elif jogador > easy:
+            jogadas = jogadas - 1
+            print('Menor!',  jogadas, ' jogadas restantes!\n')
+        elif jogador < easy:
+            jogadas = jogadas - 1
+            print('Maior!', jogadas, ' jogadas restantes!\n')
+        elif jogador == easy:
+            print('=-='*11)
+            print(
+                f'Parabéns! Acertou na mosca!\nE ainda sobraram {jogadas - 1} jogadas!\n')
+            print('=-='*11)
+            break
+
+    if dificuldade == 2:
+        jogador = int(input('Tente adivinhar um numero de 1 a 20: '))
+        if jogador < 1 or jogador > 20:
+            print('Entrada invalida! Por favor, escolha um numero entre 1 e 20!\n')
+        elif jogador > medium:
+            jogadas = jogadas - 1
+            print('Menor!',  jogadas, ' jogadas restantes!\n')
+        elif jogador < medium:
+            jogadas = jogadas - 1
+            print('Maior!', jogadas, ' jogadas restantes!\n')
+        elif jogador == medium:
+            print('=-='*11)
+            print(
+                f'Parabéns! Acertou na mosca!\nE ainda sobraram {jogadas - 1} jogadas!\n')
+            print('=-='*11)
+            break
+
+    if dificuldade == 3:
+        jogador = int(input('Tente adivinhar um numero de 1 a 30: '))
+        if jogador < 1 or jogador > 30:
+            print('Entrada invalida! Por favor, escolha um numero entre 1 e 30!\n')
+        elif jogador > hard:
+            jogadas = jogadas - 1
+            print('Menor!',  jogadas, ' jogadas restantes!\n')
+        elif jogador < hard:
+            jogadas = jogadas - 1
+            print('Maior!', jogadas, ' jogadas restantes!\n')
+        elif jogador == hard:
+            print('=-='*11)
+            print(
+                f'Parabéns! Acertou na mosca!\nE ainda sobraram {jogadas - 1} jogadas!\n')
+            print('=-='*11)
+            break
+
+    if dificuldade == 4:
+        jogador = int(input('Tente adivinhar um numero de 1 a 50: '))
+        if jogador < 1 or jogador > 50:
+            print('Entrada invalida! Por favor, escolha um numero entre 1 e 50!\n')
+        elif jogador > extreme:
+            jogadas = jogadas - 1
+            print('Menor!',  jogadas, ' jogadas restantes!\n')
+        elif jogador < extreme:
+            jogadas = jogadas - 1
+            print('Maior!', jogadas, ' jogadas restantes!\n')
+        elif jogador == extreme:
+            print('=-='*11)
+            print(
+                f'Parabéns! Acertou na mosca!\nE ainda sobraram {jogadas - 1} jogadas!\n')
+            print('=-='*11)
+            break
+
+    if dificuldade == 5:
+        jogador = int(input('Tente adivinhar um numero de 1 a 100: '))
+        if jogador < 1 or jogador > 100:
+            print('Entrada invalida! Por favor, escolha um numero entre 1 e 100!\n')
+        elif jogador > impossible:
+            jogadas = jogadas - 1
+            print('Menor!',  jogadas, ' jogadas restantes!\n')
+        elif jogador < impossible:
+            jogadas = jogadas - 1
+            print('Maior!', jogadas, ' jogadas restantes!\n')
+        elif jogador == impossible:
+            print('=-='*11)
+            print(
+                f'Parabéns! Acertou na mosca!\nE ainda sobraram {jogadas - 1} jogada(s)!\n')
+            print('=-='*11)
+            break
